@@ -1,0 +1,111 @@
+name: CI
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with: { node-version: 22, cache: npm }
+            - run: npm ci
+            - run: npm run lint
+            - run: npm run format:ci
+            - run: npm run typecheck
+
+    unit:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                node: [20, 22, 24]
+                typeorm: ["0.3.x", "1.1.0"]
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with: { node-version: "${{ matrix.node }}", cache: npm }
+            - name: Pin TypeORM ${{ matrix.typeorm }}
+              run: npm pkg set devDependencies.typeorm="${{ matrix.typeorm }}"
+            - run: npm install
+            - name: Report installed TypeORM version
+              # require('typeorm/package.json') is blocked by TypeORM's exports map in
+              # both 0.3.x and v1, so read the manifest from disk.
+              run: node -e "console.log('typeorm', JSON.parse(require('fs').readFileSync('./node_modules/typeorm/package.json','utf8')).version)"
+            - run: npm test
+            - name: Coverage floor
+              run: npm run coverage
+
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with: { node-version: 22, cache: npm }
+            - run: npm ci
+            - run: npm run build
+            - name: Smoke-test both module formats
+              run: |
+                  node -e "const m=require('./dist/cjs/index.js'); if(typeof m.installStrongMigrations!=='function') throw new Error('CJS entry broken')"
+                  node --input-type=module -e "import('./dist/esm/index.mjs').then(m=>{if(typeof m.installStrongMigrations!=='function') throw new Error('ESM entry broken')})"
+
+    integration:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                include:
+                    - adapter: postgres
+                      typeorm: "1.1.0"
+                    - adapter: postgres
+                      typeorm: "0.3.x"
+                    - adapter: mysql
+                      typeorm: "1.1.0"
+                    - adapter: mariadb
+                      typeorm: "1.1.0"
+        services:
+            postgres:
+                image: postgres:17.9
+                env:
+                    POSTGRES_USER: username
+                    POSTGRES_PASSWORD: password
+                    POSTGRES_DB: strong_migrations_test
+                ports: ["5432:5432"]
+                options: >-
+                    --health-cmd "pg_isready -U username -d strong_migrations_test"
+                    --health-interval 5s --health-timeout 5s --health-retries 20
+            mysql:
+                image: mysql:8.4.7
+                env:
+                    MYSQL_ROOT_PASSWORD: admin
+                    MYSQL_DATABASE: strong_migrations_test
+                ports: ["3306:3306"]
+                options: >-
+                    --health-cmd "mysqladmin ping -h 127.0.0.1 -uroot -padmin"
+                    --health-interval 5s --health-timeout 5s --health-retries 20
+            mariadb:
+                image: mariadb:11.8.5
+                env:
+                    MYSQL_ROOT_PASSWORD: admin
+                    MYSQL_DATABASE: strong_migrations_test
+                ports: ["3307:3306"]
+                options: >-
+                    --health-cmd "healthcheck.sh --connect --innodb_initialized"
+                    --health-interval 5s --health-timeout 5s --health-retries 20
+        env:
+            ADAPTER: ${{ matrix.adapter }}
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with: { node-version: 22, cache: npm }
+            - name: Pin TypeORM ${{ matrix.typeorm }}
+              run: npm pkg set devDependencies.typeorm="${{ matrix.typeorm }}"
+            - run: npm install
+            - run: npm run test:integration

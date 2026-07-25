@@ -1,0 +1,6 @@
+dist/
+coverage/
+node_modules/
+typeorm/
+strong_migrations/
+nestjs-typeorm/

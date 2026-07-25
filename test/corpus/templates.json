@@ -1,0 +1,2489 @@
+{
+    "templates": [
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:496",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 496,
+            "text": "CREATE DATABASE ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:497",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 497,
+            "text": "DROP DATABASE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:510",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 510,
+            "text": "DROP DATABASE IF EXISTS ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:511",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 511,
+            "text": "DROP DATABASE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:512",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 512,
+            "text": "CREATE DATABASE ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:533",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 533,
+            "text": "CREATE SCHEMA IF NOT EXISTS ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:534",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 534,
+            "text": "CREATE SCHEMA ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:535",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 535,
+            "text": "DROP SCHEMA ${...} CASCADE",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:558",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 558,
+            "text": "DROP SCHEMA IF EXISTS ${...} ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:559",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 559,
+            "text": "DROP SCHEMA ${...} ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:560",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 560,
+            "text": "CREATE SCHEMA ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:662",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 662,
+            "text": "COMMENT ON TABLE ${...}",
+            "head": "comment"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:668",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 668,
+            "text": "COMMENT ON TABLE ${...}",
+            "head": "comment"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:830",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 830,
+            "text": "ALTER TABLE ${...} RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:837",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 837,
+            "text": "ALTER TABLE ${...} RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:864",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 864,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:871",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 871,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:893",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 893,
+            "text": "ALTER SEQUENCE ${...} RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:896",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 896,
+            "text": "ALTER SEQUENCE ${...} RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:926",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 926,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:935",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 935,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:968",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 968,
+            "text": "ALTER INDEX \"${...}\".\"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:969",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 969,
+            "text": "ALTER INDEX \"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:971",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 971,
+            "text": "ALTER INDEX \"${...}\".\"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:972",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 972,
+            "text": "ALTER INDEX \"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1005",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1005,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1014",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1014,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1040",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1040,
+            "text": "ALTER TYPE \"${...}\".\"${...}\" RENAME TO ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1051",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1051,
+            "text": "ALTER TYPE ${...} RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1088",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1088,
+            "text": "ALTER TABLE ${...} ADD ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1095",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1095,
+            "text": "ALTER TABLE ${...} DROP COLUMN \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1119",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1119,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1126",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1126,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1147",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1147,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1154",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1154,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1184",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1184,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" UNIQUE (\"${...}\")",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1191",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1191,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1230",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1230,
+            "text": "COMMENT ON COLUMN ${...}.\"${...}\" IS ${...}",
+            "head": "comment"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1237",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1237,
+            "text": "COMMENT ON COLUMN ${...}.\"${...}\" IS ${...}",
+            "head": "comment"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1349",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1349,
+            "text": "ALTER TABLE ${...} RENAME COLUMN \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1356",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1356,
+            "text": "ALTER TABLE ${...} RENAME COLUMN \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1373",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1373,
+            "text": "ALTER TYPE \"${...}\".\"${...}\" RENAME TO ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1384",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1384,
+            "text": "ALTER TYPE ${...} RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1422",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1422,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1429",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1429,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1459",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1459,
+            "text": "ALTER SEQUENCE ${...} RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1462",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1462,
+            "text": "ALTER SEQUENCE ${...} RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1496",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1496,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1505",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1505,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1545",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1545,
+            "text": "ALTER INDEX \"${...}\".\"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1546",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1546,
+            "text": "ALTER INDEX \"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1548",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1548,
+            "text": "ALTER INDEX \"${...}\".\"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1549",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1549,
+            "text": "ALTER INDEX \"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1590",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1590,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1599",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1599,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1627",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1627,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1634",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1634,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1703",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1703,
+            "text": "ALTER TYPE ${...} ADD VALUE '${...}'",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1712",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1712,
+            "text": "ALTER TYPE ${...} RENAME TO ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1724",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1724,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1743",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1743,
+            "text": "ALTER TYPE ${...} RENAME TO ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1748",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1748,
+            "text": "ALTER TYPE ${...} RENAME TO ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1769",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1769,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1778",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1778,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1794",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1794,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1801",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1801,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1816",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1816,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1825",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1825,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1856",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1856,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP NOT NULL",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1863",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1863,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET NOT NULL",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1871",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1871,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET NOT NULL",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1878",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1878,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP NOT NULL",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1889",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1889,
+            "text": "COMMENT ON COLUMN ${...}.\"${...}\" IS ${...}",
+            "head": "comment"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1896",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1896,
+            "text": "COMMENT ON COLUMN ${...}.\"${...}\" IS ${...}",
+            "head": "comment"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1921",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1921,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1928",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1928,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1955",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1955,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1962",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1962,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:1997",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 1997,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2004",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2004,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2025",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2025,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" UNIQUE (\"${...}\")",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2034",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2034,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2057",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2057,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2064",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2064,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" UNIQUE (\"${...}\")",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2080",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2080,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2089",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2089,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2099",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2099,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2108",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2108,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT nextval('${...}')",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2120",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2120,
+            "text": "DROP SEQUENCE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2127",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2127,
+            "text": "CREATE SEQUENCE IF NOT EXISTS ${...} OWNED BY ${...}.\"${...}\"",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2141",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2141,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2150",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2150,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2160",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2160,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2169",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2169,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2181",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2181,
+            "text": "CREATE SEQUENCE IF NOT EXISTS ${...} OWNED BY ${...}.\"${...}\"",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2190",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2190,
+            "text": "DROP SEQUENCE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2198",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2198,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT nextval('${...}')",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2209",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2209,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2219",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2219,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2228",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2228,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT nextval('${...}')",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2240",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2240,
+            "text": "DROP SEQUENCE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2247",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2247,
+            "text": "CREATE SEQUENCE IF NOT EXISTS ${...} OWNED BY ${...}.\"${...}\"",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2269",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2269,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2283",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2283,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2293",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2293,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2307",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2307,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2314",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2314,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2331",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2331,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2338",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2338,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2349",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2349,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...} COLLATE \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2363",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2363,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...} COLLATE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2385",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2385,
+            "text": "ALTER TABLE ${...} RENAME COLUMN \"${...}\" TO \"TEMP_OLD_${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2394",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2394,
+            "text": "ALTER TABLE ${...} ADD ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2411",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2411,
+            "text": "ALTER TABLE ${...} DROP COLUMN \"TEMP_OLD_${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2438",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2438,
+            "text": "ALTER TABLE ${...} ADD ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2448",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2448,
+            "text": "ALTER TABLE ${...} DROP COLUMN \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2529",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2529,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2536",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2536,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2561",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2561,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2568",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2568,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2627",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2627,
+            "text": "ALTER TABLE ${...} DROP COLUMN ${...}\"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2634",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2634,
+            "text": "ALTER TABLE ${...} ADD ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2771",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2771,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2778",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2778,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2805",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2805,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:2812",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 2812,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:3411",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 3411,
+            "text": "TRUNCATE TABLE ${...}${...}",
+            "head": "truncate"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:3448",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 3448,
+            "text": "DROP VIEW IF EXISTS ${...} CASCADE",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:3462",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 3462,
+            "text": "DROP MATERIALIZED VIEW IF EXISTS ${...} CASCADE",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:3478",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 3478,
+            "text": "DROP TABLE IF EXISTS ${...} CASCADE",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4356",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4356,
+            "text": "CREATE TABLE ${...} (${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4524",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4524,
+            "text": "DROP TABLE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4533",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4533,
+            "text": "CREATE ${...}VIEW ${...} AS ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4537",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4537,
+            "text": "CREATE ${...}VIEW ${...} AS ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4575",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4575,
+            "text": "DROP ${...}VIEW ${...}${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4611",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4611,
+            "text": "DROP TYPE IF EXISTS ${...} CASCADE",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4654",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4654,
+            "text": "CREATE TYPE ${...} AS ENUM(${...})",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4670",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4670,
+            "text": "DROP TYPE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4698",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4698,
+            "text": "CREATE ${...}INDEX${...} \"${...}\" ON ${...} ${...} (${...}) ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4719",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4719,
+            "text": "CREATE ${...}INDEX \"${...}\" ON ${...} ${...} (${...}) ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4749",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4749,
+            "text": "DROP INDEX ${...}${...}\"${...}\".\"${...}\"",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4754",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4754,
+            "text": "DROP INDEX ${...}${...}\"${...}\"",
+            "head": "drop"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4781",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4781,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4805",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4805,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT ${...}\"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4824",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4824,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" UNIQUE (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4849",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4849,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT ${...}\"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4866",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4866,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" CHECK (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4889",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4889,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT ${...}\"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4905",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4905,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" EXCLUDE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4932",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4932,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT ${...}\"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4955",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4955,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" FOREIGN KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:4987",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 4987,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT ${...}\"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:5230",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 5230,
+            "text": "COMMENT ON TABLE ${...} IS ${...}",
+            "head": "comment"
+        },
+        {
+            "id": "driver/postgres/PostgresQueryRunner.ts:5238",
+            "file": "driver/postgres/PostgresQueryRunner.ts",
+            "line": 5238,
+            "text": "COMMENT ON TABLE ${...} IS ${...}",
+            "head": "comment"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:434",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 434,
+            "text": "CREATE DATABASE IF NOT EXISTS ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:435",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 435,
+            "text": "CREATE DATABASE ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:436",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 436,
+            "text": "DROP DATABASE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:448",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 448,
+            "text": "DROP DATABASE IF EXISTS ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:449",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 449,
+            "text": "DROP DATABASE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:450",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 450,
+            "text": "CREATE DATABASE ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:657",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 657,
+            "text": "DROP VIEW IF EXISTS ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:691",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 691,
+            "text": "RENAME TABLE ${...} TO ${...}",
+            "head": "rename"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:698",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 698,
+            "text": "RENAME TABLE ${...} TO ${...}",
+            "head": "rename"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:736",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 736,
+            "text": "ALTER TABLE ${...} DROP INDEX `${...}`, ADD ${...}INDEX `${...}` (${...})${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:743",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 743,
+            "text": "ALTER TABLE ${...} DROP INDEX `${...}`, ADD ${...}INDEX `${...}` (${...})${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:785",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 785,
+            "text": "ALTER TABLE ${...} DROP FOREIGN KEY `${...}`, ADD CONSTRAINT `${...}` FOREIGN KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:795",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 795,
+            "text": "ALTER TABLE ${...} DROP FOREIGN KEY `${...}`, ADD CONSTRAINT `${...}` FOREIGN KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:849",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 849,
+            "text": "ALTER TABLE ${...} COMMENT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:856",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 856,
+            "text": "ALTER TABLE ${...} COMMENT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:887",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 887,
+            "text": "ALTER TABLE ${...} ADD ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:898",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 898,
+            "text": "ALTER TABLE ${...} DROP COLUMN `${...}`",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:918",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 918,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:928",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 928,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:941",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 941,
+            "text": "ALTER TABLE ${...} DROP PRIMARY KEY",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:946",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 946,
+            "text": "ALTER TABLE ${...} ADD PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:958",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 958,
+            "text": "ALTER TABLE ${...} ADD PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:965",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 965,
+            "text": "ALTER TABLE ${...} DROP PRIMARY KEY",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:976",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 976,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:983",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 983,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1041",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1041,
+            "text": "ALTER TABLE ${...} ADD UNIQUE INDEX `${...}` (`${...}`)",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1048",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1048,
+            "text": "ALTER TABLE ${...} DROP INDEX `${...}`",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1159",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1159,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1170",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1170,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1219",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1219,
+            "text": "ALTER TABLE ${...} DROP INDEX `${...}`, ADD ${...}INDEX `${...}` (${...})${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1228",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1228,
+            "text": "ALTER TABLE ${...} DROP INDEX `${...}`, ADD ${...}INDEX `${...}` (${...})${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1278",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1278,
+            "text": "ALTER TABLE ${...} DROP FOREIGN KEY `${...}`, ADD CONSTRAINT `${...}` FOREIGN KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1292",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1292,
+            "text": "ALTER TABLE ${...} DROP FOREIGN KEY `${...}`, ADD CONSTRAINT `${...}` FOREIGN KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1325",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1325,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1332",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1332,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1433",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1433,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1443",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1443,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1462",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1462,
+            "text": "ALTER TABLE ${...} DROP PRIMARY KEY",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1469",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1469,
+            "text": "ALTER TABLE ${...} ADD PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1488",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1488,
+            "text": "ALTER TABLE ${...} ADD PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1495",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1495,
+            "text": "ALTER TABLE ${...} DROP PRIMARY KEY",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1521",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1521,
+            "text": "ALTER TABLE ${...} ADD PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1528",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1528,
+            "text": "ALTER TABLE ${...} DROP PRIMARY KEY",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1544",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1544,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1554",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1554,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1583",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1583,
+            "text": "ALTER TABLE ${...} ADD UNIQUE INDEX `${...}` (`${...}`)",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1592",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1592,
+            "text": "ALTER TABLE ${...} DROP INDEX `${...}`",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1622",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1622,
+            "text": "ALTER TABLE ${...} DROP INDEX `${...}`",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1629",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1629,
+            "text": "ALTER TABLE ${...} ADD UNIQUE INDEX `${...}` (`${...}`)",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1703",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1703,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1713",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1713,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1729",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1729,
+            "text": "ALTER TABLE ${...} DROP PRIMARY KEY",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1736",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1736,
+            "text": "ALTER TABLE ${...} ADD PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1753",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1753,
+            "text": "ALTER TABLE ${...} ADD PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1760",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1760,
+            "text": "ALTER TABLE ${...} DROP PRIMARY KEY",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1775",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1775,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1785",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1785,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1838",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1838,
+            "text": "ALTER TABLE ${...} DROP INDEX `${...}`",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1845",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1845,
+            "text": "ALTER TABLE ${...} ADD UNIQUE INDEX `${...}` (`${...}`)",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1854",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1854,
+            "text": "ALTER TABLE ${...} DROP COLUMN `${...}`",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1861",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1861,
+            "text": "ALTER TABLE ${...} ADD ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1966",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1966,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1973",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1973,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1988",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1988,
+            "text": "ALTER TABLE ${...} DROP PRIMARY KEY",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:1993",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 1993,
+            "text": "ALTER TABLE ${...} ADD PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:2012",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 2012,
+            "text": "ALTER TABLE ${...} ADD PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:2018",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 2018,
+            "text": "ALTER TABLE ${...} DROP PRIMARY KEY",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:2036",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 2036,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:2046",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 2046,
+            "text": "ALTER TABLE ${...} CHANGE `${...}` ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:2479",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 2479,
+            "text": "TRUNCATE TABLE ${...}",
+            "head": "truncate"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:3180",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 3180,
+            "text": "CREATE TABLE ${...} (${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:3300",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 3300,
+            "text": "COMMENT=\"${...}\"",
+            "head": "comment"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:3312",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 3312,
+            "text": "DROP TABLE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:3318",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 3318,
+            "text": "CREATE VIEW ${...} AS ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:3322",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 3322,
+            "text": "CREATE VIEW ${...} AS ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:3349",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 3349,
+            "text": "DROP VIEW ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:3391",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 3391,
+            "text": "CREATE ${...}INDEX `${...}` ON ${...} (${...})${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:3411",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 3411,
+            "text": "DROP INDEX `${...}` ON ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:3426",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 3426,
+            "text": "ALTER TABLE ${...} ADD PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:3439",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 3439,
+            "text": "ALTER TABLE ${...} DROP PRIMARY KEY",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:3460",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 3460,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT `${...}` FOREIGN KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:3488",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 3488,
+            "text": "ALTER TABLE ${...} DROP FOREIGN KEY `${...}`",
+            "head": "alter"
+        },
+        {
+            "id": "driver/mysql/MysqlQueryRunner.ts:3581",
+            "file": "driver/mysql/MysqlQueryRunner.ts",
+            "line": 3581,
+            "text": "COMMENT ${...}",
+            "head": "comment"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:570",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 570,
+            "text": "CREATE DATABASE ${...} ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:573",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 573,
+            "text": "DROP DATABASE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:584",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 584,
+            "text": "DROP DATABASE ${...} ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:585",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 585,
+            "text": "CREATE DATABASE ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:606",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 606,
+            "text": "CREATE SCHEMA IF NOT EXISTS ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:607",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 607,
+            "text": "CREATE SCHEMA ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:608",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 608,
+            "text": "DROP SCHEMA ${...} CASCADE",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:631",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 631,
+            "text": "DROP SCHEMA IF EXISTS ${...} ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:632",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 632,
+            "text": "DROP SCHEMA ${...} ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:633",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 633,
+            "text": "CREATE SCHEMA ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:685",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 685,
+            "text": "CREATE SEQUENCE ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:692",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 692,
+            "text": "DROP SEQUENCE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:810",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 810,
+            "text": "DROP SEQUENCE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:817",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 817,
+            "text": "CREATE SEQUENCE ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:892",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 892,
+            "text": "DROP VIEW IF EXISTS ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:928",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 928,
+            "text": "ALTER TABLE ${...} RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:935",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 935,
+            "text": "ALTER TABLE ${...} RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:961",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 961,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:968",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 968,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:996",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 996,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1005",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1005,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1038",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1038,
+            "text": "ALTER INDEX \"${...}\".\"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1039",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1039,
+            "text": "ALTER INDEX \"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1041",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1041,
+            "text": "ALTER INDEX \"${...}\".\"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1042",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1042,
+            "text": "ALTER INDEX \"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1075",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1075,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1084",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1084,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1110",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1110,
+            "text": "ALTER TYPE \"${...}\".\"${...}\" RENAME TO ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1121",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1121,
+            "text": "ALTER TYPE ${...} RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1165",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1165,
+            "text": "ALTER TABLE ${...} ADD ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1172",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1172,
+            "text": "ALTER TABLE ${...} DROP COLUMN \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1196",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1196,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1203",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1203,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1223",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1223,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1230",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1230,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1305",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1305,
+            "text": "COMMENT ON COLUMN ${...}.\"${...}\" IS ${...}",
+            "head": "comment"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1312",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1312,
+            "text": "COMMENT ON COLUMN ${...}.\"${...}\" IS ${...}",
+            "head": "comment"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1422",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1422,
+            "text": "ALTER TABLE ${...} RENAME COLUMN \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1429",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1429,
+            "text": "ALTER TABLE ${...} RENAME COLUMN \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1446",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1446,
+            "text": "ALTER TYPE \"${...}\".\"${...}\" RENAME TO ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1457",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1457,
+            "text": "ALTER TYPE ${...} RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1495",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1495,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1502",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1502,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1535",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1535,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1544",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1544,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1584",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1584,
+            "text": "ALTER INDEX \"${...}\".\"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1585",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1585,
+            "text": "ALTER INDEX \"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1587",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1587,
+            "text": "ALTER INDEX \"${...}\".\"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1588",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1588,
+            "text": "ALTER INDEX \"${...}\" RENAME TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1628",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1628,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1637",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1637,
+            "text": "ALTER TABLE ${...} RENAME CONSTRAINT \"${...}\" TO \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1665",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1665,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1672",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1672,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1683",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1683,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP NOT NULL",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1690",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1690,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET NOT NULL",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1698",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1698,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET NOT NULL",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1705",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1705,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP NOT NULL",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1716",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1716,
+            "text": "COMMENT ON COLUMN ${...}.\"${...}\" IS ${...}",
+            "head": "comment"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1723",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1723,
+            "text": "COMMENT ON COLUMN ${...}.\"${...}\" IS ${...}",
+            "head": "comment"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1748",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1748,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1755",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1755,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1782",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1782,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1789",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1789,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1823",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1823,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1830",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1830,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1927",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1927,
+            "text": "ALTER TYPE ${...} RENAME TO ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1932",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1932,
+            "text": "ALTER TYPE ${...} RENAME TO ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1953",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1953,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1960",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1960,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1975",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1975,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:1989",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 1989,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2002",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2002,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2011",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2011,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2047",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2047,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT unique_rowid()",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2056",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2056,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2067",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2067,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2074",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2074,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT unique_rowid()",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2094",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2094,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2108",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2108,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2118",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2118,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2132",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2132,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" DROP DEFAULT",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2139",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2139,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" SET DEFAULT ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2157",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2157,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2164",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2164,
+            "text": "ALTER TABLE ${...} ALTER COLUMN \"${...}\" TYPE ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2234",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2234,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2241",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2241,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2266",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2266,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2273",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2273,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2331",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2331,
+            "text": "ALTER TABLE ${...} DROP COLUMN ${...}\"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2338",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2338,
+            "text": "ALTER TABLE ${...} ADD ${...}",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2347",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2347,
+            "text": "DROP SEQUENCE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2354",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2354,
+            "text": "CREATE SEQUENCE ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2488",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2488,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2495",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2495,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2521",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2521,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:2528",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 2528,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:3034",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 3034,
+            "text": "TRUNCATE TABLE ${...}${...}",
+            "head": "truncate"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:3075",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 3075,
+            "text": "DROP VIEW IF EXISTS ${...} CASCADE",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:3088",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 3088,
+            "text": "DROP TABLE IF EXISTS ${...} CASCADE",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:3101",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 3101,
+            "text": "DROP SEQUENCE IF EXISTS ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:3839",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 3839,
+            "text": "CREATE TABLE ${...} (${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:3989",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 3989,
+            "text": "DROP TABLE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:3995",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 3995,
+            "text": "CREATE VIEW ${...} AS ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:3999",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 3999,
+            "text": "CREATE VIEW ${...} AS ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4029",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4029,
+            "text": "DROP VIEW ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4068",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4068,
+            "text": "DROP TYPE IF EXISTS ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4111",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4111,
+            "text": "CREATE TYPE ${...} AS ENUM(${...})",
+            "head": "create"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4127",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4127,
+            "text": "DROP TYPE ${...}",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4142",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4142,
+            "text": "CREATE ${...}INDEX \"${...}\" ON ${...} ${...}(${...}) ${...}",
+            "head": "create"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4168",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4168,
+            "text": "DROP INDEX ${...}${...}@\"${...}\" CASCADE",
+            "head": "drop"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4191",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4191,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" PRIMARY KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4213",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4213,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT ${...}\"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4233",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4233,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" UNIQUE (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4253",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4253,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT \"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4270",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4270,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" CHECK (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4292",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4292,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT ${...}\"${...}\"",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4315",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4315,
+            "text": "ALTER TABLE ${...} ADD CONSTRAINT \"${...}\" FOREIGN KEY (${...})",
+            "head": "alter"
+        },
+        {
+            "id": "driver/cockroachdb/CockroachQueryRunner.ts:4345",
+            "file": "driver/cockroachdb/CockroachQueryRunner.ts",
+            "line": 4345,
+            "text": "ALTER TABLE ${...} DROP CONSTRAINT ${...}\"${...}\"",
+            "head": "alter"
+        }
+    ]
+}

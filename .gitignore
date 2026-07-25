@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.DS_Store
+.env
+.env.local
+
+# Local read-only reference checkouts (each has its own .git)
+/typeorm/
+/strong_migrations/
+/nestjs-typeorm/
+
+# transient scripts from the register subprocess test
+/.tmp-register/

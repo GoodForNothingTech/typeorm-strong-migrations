@@ -1,0 +1,81 @@
+# Host ports are overridable so a developer with a native Postgres or MySQL on the
+# default port can run the suite without touching it, e.g.
+#   TSM_PG_PORT=5434 npm run db:up && PGPORT=5434 npm run test:integration
+services:
+    postgres-17:
+        image: "postgres:17.9"
+        container_name: "tsm-postgres-17"
+        ports: ["${TSM_PG_PORT:-5432}:5432"]
+        environment:
+            POSTGRES_USER: "username"
+            POSTGRES_PASSWORD: "password"
+            POSTGRES_DB: "strong_migrations_test"
+        healthcheck:
+            test:
+                [
+                    "CMD-SHELL",
+                    "pg_isready -U username -d strong_migrations_test",
+                ]
+            interval: 5s
+            timeout: 5s
+            retries: 20
+
+    # Kept for the 14.0-14.3 CREATE INDEX CONCURRENTLY corruption check and for
+    # exercising the transaction_timeout capability gate (Postgres 17+ only).
+    postgres-14:
+        image: "postgres:14.22"
+        container_name: "tsm-postgres-14"
+        ports: ["${TSM_PG14_PORT:-5433}:5432"]
+        environment:
+            POSTGRES_USER: "username"
+            POSTGRES_PASSWORD: "password"
+            POSTGRES_DB: "strong_migrations_test"
+        healthcheck:
+            test:
+                [
+                    "CMD-SHELL",
+                    "pg_isready -U username -d strong_migrations_test",
+                ]
+            interval: 5s
+            timeout: 5s
+            retries: 20
+
+    mysql-8:
+        image: "mysql:8.4.7"
+        container_name: "tsm-mysql-8"
+        ports: ["${TSM_MYSQL_PORT:-3306}:3306"]
+        environment:
+            MYSQL_ROOT_PASSWORD: "admin"
+            MYSQL_USER: "username"
+            MYSQL_PASSWORD: "password"
+            MYSQL_DATABASE: "strong_migrations_test"
+        healthcheck:
+            test:
+                [
+                    "CMD",
+                    "mysqladmin",
+                    "ping",
+                    "-h",
+                    "127.0.0.1",
+                    "-uroot",
+                    "-padmin",
+                ]
+            interval: 5s
+            timeout: 5s
+            retries: 20
+
+    # 3307 so MySQL and MariaDB can run simultaneously (TypeORM's own convention).
+    mariadb-11:
+        image: "mariadb:11.8.5"
+        container_name: "tsm-mariadb-11"
+        ports: ["${TSM_MARIADB_PORT:-3307}:3306"]
+        environment:
+            MYSQL_ROOT_PASSWORD: "admin"
+            MYSQL_USER: "username"
+            MYSQL_PASSWORD: "password"
+            MYSQL_DATABASE: "strong_migrations_test"
+        healthcheck:
+            test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+            interval: 5s
+            timeout: 5s
+            retries: 20
