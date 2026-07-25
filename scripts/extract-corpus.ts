@@ -35,8 +35,10 @@ const DDL_HEADS = new Set([
 ])
 
 /**
- * The reference checkout sits beside this package. It is a developer convenience,
- * not a dependency, so a missing checkout is a clear message rather than a crash.
+ * Needs TypeORM's *source*, because the SQL lives in template literals that the
+ * published .d.ts does not carry. A checkout beside this package is a developer
+ * convenience, not a dependency — the generated corpus is committed, so the tests
+ * that consume it run without one.
  */
 const TYPEORM_SRC = resolve(process.cwd(), "typeorm/src")
 
@@ -106,7 +108,9 @@ function main(): void {
     if (!existsSync(TYPEORM_SRC)) {
         console.error(
             `No TypeORM checkout at ${TYPEORM_SRC}.\n` +
-                "Clone typeorm/typeorm beside this package to regenerate the corpus.",
+                "The committed corpus at test/corpus/templates.json is what the tests\n" +
+                "read, so this is only needed to regenerate it after a TypeORM bump:\n" +
+                "  git clone --depth 1 https://github.com/typeorm/typeorm.git",
         )
         process.exit(1)
     }

@@ -17,10 +17,18 @@ import { INTERCEPTED_METHODS } from "../../src/operations/from-typed"
  * When TypeORM adds a method, this fails rather than the gap silently reopening.
  */
 
-const QUERY_RUNNER = resolve(
-    process.cwd(),
-    "typeorm/src/query-runner/QueryRunner.ts",
-)
+/**
+ * Read from the *installed* TypeORM rather than a local source checkout, so this
+ * runs in CI — where it matters most, since the CI matrix tests two TypeORM majors
+ * and a new method in either should fail here rather than pass silently.
+ */
+const QUERY_RUNNER = [
+    resolve(
+        process.cwd(),
+        "node_modules/typeorm/query-runner/QueryRunner.d.ts",
+    ),
+    resolve(process.cwd(), "typeorm/src/query-runner/QueryRunner.ts"),
+].find((candidate) => existsSync(candidate))
 
 /**
  * Methods that mutate nothing, or whose mutation we deliberately do not model.
@@ -72,12 +80,12 @@ function mutatingMethods(source: string): string[] {
 }
 
 describe("QueryRunner interception coverage", () => {
-    const available = existsSync(QUERY_RUNNER)
+    const available = QUERY_RUNNER !== undefined
 
     it.skipIf(!available)(
         "intercepts every schema-mutating QueryRunner method",
         () => {
-            const methods = mutatingMethods(readFileSync(QUERY_RUNNER, "utf8"))
+            const methods = mutatingMethods(readFileSync(QUERY_RUNNER!, "utf8"))
             expect(methods.length).toBeGreaterThan(30)
 
             const uncovered = methods.filter(
@@ -97,7 +105,7 @@ describe("QueryRunner interception coverage", () => {
 
     it.skipIf(!available)("has no stale allowlist entries", () => {
         const methods = new Set(
-            mutatingMethods(readFileSync(QUERY_RUNNER, "utf8")),
+            mutatingMethods(readFileSync(QUERY_RUNNER!, "utf8")),
         )
         const stale = Object.keys(NOT_INTERCEPTED).filter(
             (method) => !methods.has(method),
