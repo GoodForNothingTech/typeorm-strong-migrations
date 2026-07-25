@@ -15,13 +15,13 @@
         "safety",
         "strong-migrations"
     ],
-    "homepage": "https://github.com/goodfornothing/typeorm-strong-migrations#readme",
+    "homepage": "https://github.com/GoodForNothingTech/typeorm-strong-migrations#readme",
     "bugs": {
-        "url": "https://github.com/goodfornothing/typeorm-strong-migrations/issues"
+        "url": "https://github.com/GoodForNothingTech/typeorm-strong-migrations/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/goodfornothing/typeorm-strong-migrations.git"
+        "url": "git+https://github.com/GoodForNothingTech/typeorm-strong-migrations.git"
     },
     "author": {
         "name": "Micah Bowie",
