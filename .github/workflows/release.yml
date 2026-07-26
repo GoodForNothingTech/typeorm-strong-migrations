@@ -108,9 +108,23 @@ jobs:
             # when one is configured — which is what the very first release needs,
             # because a trusted publisher can only be attached to a package that
             # already exists on npm.
+            #
+            # The emptiness test lives in the script rather than in `if:` because
+            # `secrets` is not an available context for a step-level condition —
+            # GitHub rejects the whole file with "Unrecognized named-value: 'secrets'".
+            # Passing it through a step-scoped `env` also keeps the token out of the
+            # command line and out of every other step's environment, which matters
+            # because the step above installs and executes a packed tarball.
             - name: Use token auth when a token is configured
-              if: ${{ secrets.NPM_TOKEN != '' }}
-              run: npm config set //registry.npmjs.org/:_authToken '${{ secrets.NPM_TOKEN }}'
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+              run: |
+                  if [ -n "${NPM_TOKEN}" ]; then
+                      npm config set //registry.npmjs.org/:_authToken "${NPM_TOKEN}"
+                      echo "Authenticating with NPM_TOKEN."
+                  else
+                      echo "No NPM_TOKEN configured; relying on trusted publishing (OIDC)."
+                  fi
 
             - name: Publish with provenance
               run: npm publish --provenance --access public

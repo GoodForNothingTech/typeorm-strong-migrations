@@ -10,6 +10,24 @@ concurrency:
     cancel-in-progress: true
 
 jobs:
+    # A workflow file is only validated when GitHub tries to run it, so an invalid
+    # release.yml stays invisible until the moment you push a release tag — which is
+    # exactly when you least want to discover it. `release.yml` shipped with
+    # `if: ${{ secrets.NPM_TOKEN != '' }}`, and `secrets` is not an available context
+    # for a step-level condition, so the entire file was rejected.
+    #
+    # This job runs on pull requests, where release.yml is otherwise never exercised.
+    workflows:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            # Pinned rather than :latest — an unpinned third-party image means a CI
+            # run can start failing on a change nobody in this repo made.
+            - name: Lint workflow files
+              uses: docker://rhysd/actionlint:1.7.12
+              with:
+                  args: -color
+
     lint:
         runs-on: ubuntu-latest
         steps:
