@@ -99,4 +99,6 @@ for (const file of walk(ROOT)) {
     if (next !== source) writeFileSync(file, next)
 }
 
-console.log(`rename-esm: renamed ${renames.size} files under dist/esm`)
+// stderr, not stdout — see write-esm-package-json.mjs. `npm pack` runs this via
+// prepack while the caller is capturing stdout for the tarball filename.
+console.error(`rename-esm: renamed ${renames.size} files under dist/esm`)

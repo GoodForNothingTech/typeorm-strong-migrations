@@ -17,6 +17,9 @@ writeFileSync(
     JSON.stringify({ type: "commonjs" }, null, 2) + "\n",
 )
 
-console.log(
+// stderr, not stdout: these scripts run under `prepack`, so `npm pack` executes them
+// while a caller is capturing its stdout to learn the tarball filename. Anything
+// printed here lands in that capture and corrupts the name.
+console.error(
     "write-esm-package-json: wrote dist/esm/package.json and dist/cjs/package.json",
 )
