@@ -173,41 +173,64 @@ function compile(source: string): string[] {
         )
 }
 
+/**
+ * Each case builds a real `ts.Program` against TypeORM's shipped declarations, which
+ * costs seconds on a cold cache — the first case here took 6.7s under coverage
+ * instrumentation and blew the 5s default, while later ones reuse the loaded lib files
+ * and finish instantly.
+ *
+ * Generous rather than tight: this is a known-slow compile, so a timeout here would
+ * only ever be a false alarm about CI runner speed.
+ */
+const COMPILE_TIMEOUT = 60_000
+
 describe("message code snippets", () => {
     for (const key of CHECK_KEYS) {
-        it(`${key} shows code that type-checks against the installed TypeORM`, () => {
-            const rendered = interpolate(ERROR_MESSAGES[key], {
-                ...PLACEHOLDER_VALUES,
-                ...PER_KEY_OVERRIDES[key],
-            })
-            const snippets = extractSnippets(rendered)
-            if (snippets.length === 0) return
+        it(
+            `${key} shows code that type-checks against the installed TypeORM`,
+            () => {
+                const rendered = interpolate(ERROR_MESSAGES[key], {
+                    ...PLACEHOLDER_VALUES,
+                    ...PER_KEY_OVERRIDES[key],
+                })
+                const snippets = extractSnippets(rendered)
+                if (snippets.length === 0) return
 
-            for (const snippet of snippets) {
-                // A snippet with an explicit `// ...` elision is showing a fragment of
-                // the reader's own config, not something to paste whole, so it cannot
-                // be expected to compile standalone.
-                if (snippet.includes("// ...")) continue
-                const errors = compile(`${PREAMBLE}\n${snippet}\n`)
-                expect(
-                    errors,
-                    `${key}\n\n${snippet}\n\nerrors: ${errors.join("; ")}`,
-                ).toEqual([])
-            }
-        })
+                for (const snippet of snippets) {
+                    // A snippet with an explicit `// ...` elision is showing a fragment of
+                    // the reader's own config, not something to paste whole, so it cannot
+                    // be expected to compile standalone.
+                    if (snippet.includes("// ...")) continue
+                    const errors = compile(`${PREAMBLE}\n${snippet}\n`)
+                    expect(
+                        errors,
+                        `${key}\n\n${snippet}\n\nerrors: ${errors.join("; ")}`,
+                    ).toEqual([])
+                }
+            },
+            COMPILE_TIMEOUT,
+        )
     }
 
-    it("actually rejects a broken snippet, so the harness is not vacuous", () => {
-        const errors = compile(
-            `${PREAMBLE}\nexport const x: number = "not a number"\n`,
-        )
-        expect(errors.length).toBeGreaterThan(0)
-    })
+    it(
+        "actually rejects a broken snippet, so the harness is not vacuous",
+        () => {
+            const errors = compile(
+                `${PREAMBLE}\nexport const x: number = "not a number"\n`,
+            )
+            expect(errors.length).toBeGreaterThan(0)
+        },
+        COMPILE_TIMEOUT,
+    )
 
-    it("proves TableIndex.isConcurrent exists, which the safe index form depends on", () => {
-        const errors = compile(
-            `${PREAMBLE}\nexport const i = new TableIndex({ name: "a", columnNames: ["b"], isConcurrent: true })\n`,
-        )
-        expect(errors).toEqual([])
-    })
+    it(
+        "proves TableIndex.isConcurrent exists, which the safe index form depends on",
+        () => {
+            const errors = compile(
+                `${PREAMBLE}\nexport const i = new TableIndex({ name: "a", columnNames: ["b"], isConcurrent: true })\n`,
+            )
+            expect(errors).toEqual([])
+        },
+        COMPILE_TIMEOUT,
+    )
 })

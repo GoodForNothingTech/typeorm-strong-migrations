@@ -79,13 +79,12 @@
         "test:watch": "vitest --project unit",
         "test:integration": "vitest run --project integration",
         "test:all": "vitest run",
-        "coverage": "vitest run --coverage",
+        "coverage": "vitest run --project unit --coverage",
         "corpus:extract": "tsx scripts/extract-corpus.ts",
         "db:up": "docker compose up -d --wait",
         "db:down": "docker compose down -v",
         "prepack": "npm run clean && npm run build"
     },
-    "dependencies": {},
     "peerDependencies": {
         "typeorm": "^0.3.0 || ^1.0.0-dev"
     },
