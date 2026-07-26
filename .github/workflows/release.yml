@@ -86,10 +86,22 @@ jobs:
             # resolution failures — none of which the unit suite can see.
             - name: Smoke-test the packed tarball
               run: |
-                  TARBALL="$(npm pack --silent)"
+                  # Pack into a dedicated directory and find the tarball on disk rather
+                  # than reading npm's stdout. `npm pack` runs `prepack`, so every build
+                  # script shares that stream — `--silent` mutes npm itself but not the
+                  # children, and their progress lines end up concatenated into the
+                  # filename. Globbing an empty directory cannot be polluted that way.
+                  rm -rf /tmp/pack && mkdir -p /tmp/pack
+                  npm pack --pack-destination /tmp/pack
+                  TARBALL="$(find /tmp/pack -maxdepth 1 -name '*.tgz')"
+                  if [ "$(printf '%s\n' "${TARBALL}" | wc -l)" -ne 1 ] || [ ! -f "${TARBALL}" ]; then
+                      echo "::error::Expected exactly one tarball in /tmp/pack, got: ${TARBALL}"
+                      exit 1
+                  fi
+                  echo "Packed ${TARBALL}"
                   mkdir -p /tmp/consumer && cd /tmp/consumer
                   npm init -y >/dev/null
-                  npm install --no-audit --no-fund typeorm@1 "${GITHUB_WORKSPACE}/${TARBALL}"
+                  npm install --no-audit --no-fund typeorm@1 "${TARBALL}"
                   node -e "
                     const sm = require('typeorm-strong-migrations')
                     if (typeof sm.installStrongMigrations !== 'function') throw new Error('CJS entry broken')

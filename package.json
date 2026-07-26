@@ -1,6 +1,6 @@
 {
     "name": "typeorm-strong-migrations",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "Catch unsafe TypeORM migrations in development",
     "keywords": [
         "typeorm",
