@@ -334,47 +334,6 @@ Other differences:
 - Added: `dropTable`, `backfill`, `transactionMode`, and
   `concurrentIndexInTransaction`, which have no gem counterpart.
 
-## Releasing
-
-Releases publish from CI on a `v*` tag, with [npm provenance](https://docs.npmjs.com/generating-provenance-statements)
-— a signed attestation linking the published tarball to the commit and workflow run
-that produced it.
-
-```sh
-npm version patch          # or minor / major — updates package.json and tags
-git push --follow-tags
-```
-
-The workflow refuses to publish if the tag disagrees with `package.json`, if that
-version already exists on npm, or if `npm publish --dry-run` shows npm rewriting the
-manifest. It also installs the packed tarball into an empty project and exercises the
-CJS entry, the ESM entry and the CLI before publishing.
-
-### First release
-
-Trusted publishing can only be attached to a package that already exists, so the first
-release needs a token:
-
-1. Create a [granular access token](https://www.npmjs.com/settings/~/tokens) scoped to
-   this package with **Read and write** access, and add it as the `NPM_TOKEN` repository
-   secret.
-2. Tag and push. The workflow uses the token when one is present.
-
-### After the first release
-
-Switch to trusted publishing and delete the token — no long-lived secret, and npm is
-[restricting 2FA-bypass tokens](https://gh.io/npm-gat-bypass2fa-deprecation) anyway.
-
-On the package page → **Settings** → **Trusted publisher** → GitHub Actions:
-
-| Field                | Value                       |
-| -------------------- | --------------------------- |
-| Organization or user | `GoodForNothingTech`        |
-| Repository           | `typeorm-strong-migrations` |
-| Workflow filename    | `release.yml`               |
-
-Then remove the `NPM_TOKEN` secret. The workflow falls back to OIDC automatically.
-
 ## Development
 
 ```sh
