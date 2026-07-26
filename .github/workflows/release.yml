@@ -1,0 +1,126 @@
+name: Release
+
+# Publishes when a v* tag is pushed. The tag is the trigger and the source of truth
+# for the version — a mismatch against package.json fails the run before anything
+# reaches npm.
+on:
+    push:
+        tags: ["v*"]
+
+permissions:
+    contents: read
+
+jobs:
+    release:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            # Required for both npm provenance and trusted publishing. Without it the
+            # OIDC token cannot be minted and `--provenance` fails.
+            id-token: write
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v4
+              with:
+                  # Ships npm 11.x. Provenance needs >= 9.5; trusted publishing needs
+                  # >= 11.5.1.
+                  node-version: 24
+                  cache: npm
+
+            - name: Report toolchain
+              run: |
+                  echo "node $(node --version)"
+                  echo "npm  $(npm --version)"
+
+            - run: npm ci
+
+            # The tag is what people will cite; package.json is what npm records. If
+            # they disagree, the wrong version ships under the right name — and npm
+            # versions are immutable, so it cannot be taken back.
+            - name: Tag must match package.json
+              run: |
+                  TAG_VERSION="${GITHUB_REF_NAME#v}"
+                  PKG_VERSION="$(node -p "require('./package.json').version")"
+                  if [ "$TAG_VERSION" != "$PKG_VERSION" ]; then
+                      echo "::error::Tag ${GITHUB_REF_NAME} does not match package.json version ${PKG_VERSION}."
+                      echo "Run: npm version ${TAG_VERSION} --no-git-tag-version, commit, then re-tag."
+                      exit 1
+                  fi
+                  echo "Releasing ${PKG_VERSION}"
+
+            - name: Refuse to republish an existing version
+              run: |
+                  NAME="$(node -p "require('./package.json').name")"
+                  VERSION="$(node -p "require('./package.json').version")"
+                  if npm view "${NAME}@${VERSION}" version >/dev/null 2>&1; then
+                      echo "::error::${NAME}@${VERSION} is already published. Bump the version."
+                      exit 1
+                  fi
+
+            - run: npm run lint
+            - run: npm run format:ci
+            - run: npm run typecheck
+            - run: npm test
+            - run: npm run coverage
+
+            - run: npm run build
+
+            # The check that matters most before publishing, and the one that plain
+            # `npm pack` misses: npm rewrites package.json at publish time. This is how
+            # a `bin` entry silently lost its leading ./ and would have shipped without
+            # a CLI. `--dry-run` applies the same normalization, so any correction
+            # surfaces here rather than in the published tarball.
+            - name: Publish dry run must not auto-correct the manifest
+              run: |
+                  npm publish --dry-run 2>&1 | tee /tmp/dryrun.log
+                  if grep -q "auto-corrected some errors" /tmp/dryrun.log; then
+                      echo "::error::npm rewrote package.json. Run 'npm pkg fix', commit, and re-tag."
+                      grep "npm warn publish" /tmp/dryrun.log
+                      exit 1
+                  fi
+
+            # Install the real tarball into an empty project and use it the way a
+            # consumer would. Catches broken exports maps, a missing bin, and type
+            # resolution failures — none of which the unit suite can see.
+            - name: Smoke-test the packed tarball
+              run: |
+                  TARBALL="$(npm pack --silent)"
+                  mkdir -p /tmp/consumer && cd /tmp/consumer
+                  npm init -y >/dev/null
+                  npm install --no-audit --no-fund typeorm@1 "${GITHUB_WORKSPACE}/${TARBALL}"
+                  node -e "
+                    const sm = require('typeorm-strong-migrations')
+                    if (typeof sm.installStrongMigrations !== 'function') throw new Error('CJS entry broken')
+                    if (!sm.CHECK_KEYS.length) throw new Error('no check keys')
+                    require('typeorm-strong-migrations/testing')
+                    console.log('CJS ok:', sm.CHECK_KEYS.length, 'checks')
+                  "
+                  node --input-type=module -e "
+                    const sm = await import('typeorm-strong-migrations')
+                    if (typeof sm.installStrongMigrations !== 'function') throw new Error('ESM entry broken')
+                    console.log('ESM ok')
+                  "
+                  ./node_modules/.bin/typeorm-strong-migrations --version
+
+            # Trusted publishing (OIDC) needs no secret at all. A token is only used
+            # when one is configured — which is what the very first release needs,
+            # because a trusted publisher can only be attached to a package that
+            # already exists on npm.
+            - name: Use token auth when a token is configured
+              if: ${{ secrets.NPM_TOKEN != '' }}
+              run: npm config set //registry.npmjs.org/:_authToken '${{ secrets.NPM_TOKEN }}'
+
+            - name: Publish with provenance
+              run: npm publish --provenance --access public
+
+            - name: Summary
+              run: |
+                  VERSION="$(node -p "require('./package.json').version")"
+                  {
+                      echo "### Published \`typeorm-strong-migrations@${VERSION}\`"
+                      echo
+                      echo "- https://www.npmjs.com/package/typeorm-strong-migrations/v/${VERSION}"
+                      echo "- Provenance is attested from \`${GITHUB_REPOSITORY}@${GITHUB_SHA}\`."
+                  } >> "$GITHUB_STEP_SUMMARY"

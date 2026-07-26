@@ -1,7 +1,7 @@
 import { execFileSync } from "node:child_process"
-import { mkdirSync, rmSync, writeFileSync } from "node:fs"
+import { existsSync, mkdirSync, rmSync, writeFileSync } from "node:fs"
 import { join } from "node:path"
-import { describe, expect, it } from "vitest"
+import { beforeAll, describe, expect, it } from "vitest"
 
 /**
  * `register.ts` patches `DataSource.prototype` for the whole process, so it cannot be
@@ -14,6 +14,28 @@ import { describe, expect, it } from "vitest"
  */
 
 let counter = 0
+
+/**
+ * These test the *built* artifact, so they need `dist/`. It happens to exist on a
+ * machine that has run a build, which is why this passed locally and failed in CI —
+ * `npm test` does not build.
+ *
+ * Building here rather than skipping when `dist/` is missing: a test that quietly
+ * skips in CI is the same failure mode as the interception guard that read a source
+ * checkout absent from the runner. It reported success while testing nothing.
+ */
+beforeAll(() => {
+    const entry = join(process.cwd(), "dist/cjs/register.js")
+    if (existsSync(entry)) return
+    execFileSync("npm", ["run", "build"], {
+        cwd: process.cwd(),
+        stdio: "inherit",
+        timeout: 300_000,
+    })
+    if (!existsSync(entry)) {
+        throw new Error(`Build completed but ${entry} is missing`)
+    }
+}, 300_000)
 
 /**
  * Written inside the repo rather than a tmpdir, so `typeorm` resolves from the real

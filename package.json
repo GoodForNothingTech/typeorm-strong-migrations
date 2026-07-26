@@ -60,7 +60,7 @@
     "module": "./dist/esm/index.mjs",
     "types": "./dist/cjs/index.d.ts",
     "bin": {
-        "typeorm-strong-migrations": "./dist/cjs/cli.js"
+        "typeorm-strong-migrations": "dist/cjs/cli.js"
     },
     "files": [
         "dist"
