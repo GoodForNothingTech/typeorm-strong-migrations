@@ -26,8 +26,11 @@ const manifest = JSON.parse(
     exports: Record<string, unknown>
     repository: { url: string }
     peerDependencies: Record<string, string>
-    dependencies: Record<string, string>
+    dependencies?: Record<string, string>
 }
+
+const runtimeDependencies = (): Record<string, string> =>
+    manifest.dependencies ?? {}
 
 describe("package manifest", () => {
     /**
@@ -69,12 +72,17 @@ describe("package manifest", () => {
     it("declares no runtime dependencies", () => {
         // The analyzer is hand-rolled precisely so this stays empty; a dependency here
         // would be a deliberate decision, not an accident.
-        expect(manifest.dependencies).toEqual({})
+        //
+        // Absent and empty both mean "none". `npm pkg set` strips an empty
+        // `dependencies` object when it rewrites the manifest, which the CI matrix
+        // does on every run to pin the TypeORM version — so asserting the key exists
+        // tested the shape of npm's normalizer rather than anything about this package.
+        expect(runtimeDependencies()).toEqual({})
     })
 
     it("keeps typeorm a peer dependency spanning both supported majors", () => {
         expect(manifest.peerDependencies.typeorm).toBe("^0.3.0 || ^1.0.0-dev")
-        expect(manifest.dependencies).not.toHaveProperty("typeorm")
+        expect(runtimeDependencies()).not.toHaveProperty("typeorm")
     })
 
     it("points main and types at the CJS build", () => {
