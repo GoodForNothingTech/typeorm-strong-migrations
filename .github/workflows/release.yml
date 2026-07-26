@@ -116,28 +116,17 @@ jobs:
                   "
                   ./node_modules/.bin/typeorm-strong-migrations --version
 
-            # Trusted publishing (OIDC) needs no secret at all. A token is only used
-            # when one is configured — which is what the very first release needs,
-            # because a trusted publisher can only be attached to a package that
-            # already exists on npm.
+            # Authentication is trusted publishing (OIDC) only — no secret, nothing
+            # long-lived to leak or rotate. The `id-token: write` permission above is
+            # what makes it work.
             #
-            # The emptiness test lives in the script rather than in `if:` because
-            # `secrets` is not an available context for a step-level condition —
-            # GitHub rejects the whole file with "Unrecognized named-value: 'secrets'".
-            # Passing it through a step-scoped `env` also keeps the token out of the
-            # command line and out of every other step's environment, which matters
-            # because the step above installs and executes a packed tarball.
-            - name: Use token auth when a token is configured
-              env:
-                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-              run: |
-                  if [ -n "${NPM_TOKEN}" ]; then
-                      npm config set //registry.npmjs.org/:_authToken "${NPM_TOKEN}"
-                      echo "Authenticating with NPM_TOKEN."
-                  else
-                      echo "No NPM_TOKEN configured; relying on trusted publishing (OIDC)."
-                  fi
-
+            # There is deliberately no token fallback. One existed to bootstrap the
+            # first publish, because a trusted publisher can only be attached to a
+            # package that already exists; 0.1.3 was published by hand to break that
+            # cycle. Keeping the fallback now would be worse than useless: the package
+            # is set to "require two-factor authentication and disallow tokens", so a
+            # stray NPM_TOKEN secret would configure an _authToken that the registry
+            # then rejects — turning a working release into a failed one.
             - name: Publish with provenance
               run: npm publish --provenance --access public
 
